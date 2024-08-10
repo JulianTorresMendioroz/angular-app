@@ -1,0 +1,16 @@
+<div class="card-f">
+<div *ngFor="let product of products" class="card-s">
+<div class="card" style="width: 18rem;">
+    <img src={{product.img}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Producto: {{product.name}}</h5>
+      <p class="card-text">Descripcion: {{product.description}}</p>
+      <p class="card-text">Precio: {{product.price | currency}}</p>
+      <p *ngIf="product.stock > 0" class="card-text">Stock:{{product.stock}}</p>
+      <p *ngIf="product.stock == 0" class="card-text">SIN STOCK!</p>
+      <p *ngIf="product.offer" class="card-text offer">OFERTA!</p>
+      <a href="#" class="btn btn-primary">Ver detalles</a>
+    </div>
+  </div>
+  </div>
+</div>  
